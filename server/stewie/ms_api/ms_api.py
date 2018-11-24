@@ -14,4 +14,4 @@ def get_image_emotion(image_path):
 
 
 if __name__ == '__main__':
-    get_image_emotion()
+    get_image_emotion('test.jpg')
