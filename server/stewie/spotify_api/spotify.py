@@ -18,5 +18,11 @@ def get_list_playlists(token):
 def get_tracks_from_playlist(id, token):
     url = 'https://api.spotify.com/v1/playlists/'+ id + '/tracks'
     headers  = { 'Authorization': 'Bearer ' + token }
-    response = requests.post(url, headers=headers)
+    response = requests.get(url, headers=headers)
+    return response
+
+def get_track_info(id,token):
+    url = 'https://api.spotify.com/v1/audio-features/' + id
+    headers  = { 'Authorization': 'Bearer ' + token }
+    response = requests.get(url, headers=headers)
     return response
